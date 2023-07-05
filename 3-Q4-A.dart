@@ -1,4 +1,4 @@
-// For Factorial
+// For Factorial by While
 
 int Factorial(int n) {
   int result = 1;
