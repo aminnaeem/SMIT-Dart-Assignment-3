@@ -1,18 +1,25 @@
-import 'dart:io';
+// Q21. Implement a code that finds the maximum and minimum elements in a
+// list using a for loop and if-else condition.
 
 void main () {
 
-  List<int> nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  List elements = [20, 43, 28, 56, 73, 88, 69, 91, 32, 15];
 
-  for (var i = 0; i < nums.length; i++) {
-    int val = nums[i];
+  int maxElement = elements[0];
+  int minElement = elements[0];
 
-    if (val%2 != 0) {
-      stdout.write('$val is Odd number and Its Square is ');
-      val *= val;
-      stdout.write('$val');
+  for (var i = 0; i < elements.length; i++) {
+    int val = elements[i];
+
+    if (val > maxElement) {
+      maxElement = val;
     }
-    print(''); 
+    
+    if (val < minElement) {
+      minElement = val;
+    }
   }
-  
+
+  print('Maximum Element is $maxElement');
+  print('Minimum Element is $minElement');
 }
